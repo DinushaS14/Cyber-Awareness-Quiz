@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cyber Awareness Quiz</title>
+
+  <!-- Strict CSP for a static app -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'none'; form-action 'self'">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Cyber Awareness Quiz</h1>
+        <p id="bestScore" class="muted"></p>
+      </div>
+      <div class="header-actions">
+        <button id="themeBtn" type="button" class="btn ghost">Toggle Theme</button>
+      </div>
+    </header>
+
+    <p id="timer" class="muted timer">Time left: <strong>05:00</strong></p>
+
+    <div class="filters">
+      <label class="chk"><input type="checkbox" class="cat" value="phishing" checked> Phishing</label>
+      <label class="chk"><input type="checkbox" class="cat" value="passwords" checked> Passwords</label>
+      <label class="chk"><input type="checkbox" class="cat" value="malware" checked> Malware</label>
+      <div class="filter-actions">
+        <button id="applyCats" type="button" class="btn ghost">Apply</button>
+        <button id="reviewBtn" type="button" class="btn ghost">Review Mode</button>
+      </div>
+    </div>
+
+    <div class="progress">
+      <div id="bar"></div>
+    </div>
+
+    <form id="quizForm" novalidate></form>
+
+    
+
+    <section id="result" class="panel hidden" aria-live="polite"></section>
+    <section id="analytics" class="panel hidden"></section>
+
+    <div class="actions">
+  <button id="submitBtn" type="button" class="btn">Submit</button>
+  <button id="resetBtn" type="button" class="btn ghost">Retake Quiz</button>
+  <button id="shareBtn" type="button" class="btn ghost">Share Quiz</button>
+</div>
+
+  </main>
+
+  <footer class="footnote">
+    <small>Built by Dinusha · For learning only</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
